@@ -1,0 +1,26 @@
+
+##   spring:
+  ##    application:
+    ##    name: admin
+   ##   mqtt:
+   ##     url: tcp://172.20.10.3:1883
+        #用户名
+   ##     username: Guohua
+        #密码
+   ##     password: 123456
+        #客户端id(不能重复)
+  ##      client:
+ ##        id:  mqttx_867bb387
+        #MQTT默认的消息推送主题，实际可在调用接口是指定
+  ##      topic1: pub_register
+  ##      topic2: pub_account
+  ##     topic3: pub_facialrec
+  ##     topic4: sub_diary
+  ##      topic5: pub_account
+  ##      topic6:
+  ##      topic7: pub_image
+  ##      keepalive: 60
+  ## server:
+  ##    port: 8080
+
+
