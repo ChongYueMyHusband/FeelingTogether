@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "name": "publish.mqtt",
+      "type": "com.example.project_ee297.Config.MQTTConfig",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "publish.mqtt.cleansession",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.clientid",
+      "type": "java.lang.String",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.connection-timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.default-topic",
+      "type": "java.lang.String",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.host",
+      "type": "java.lang.String",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.keepalive",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.password",
+      "type": "java.lang.String",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.timeout",
+      "type": "java.lang.Integer",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    },
+    {
+      "name": "publish.mqtt.username",
+      "type": "java.lang.String",
+      "sourceType": "com.example.project_ee297.Config.MQTTConfig"
+    }
+  ],
+  "hints": []
+}
