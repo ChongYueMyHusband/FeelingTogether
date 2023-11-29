@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    > <!-- 设置对话框的背景图片 -->
+
+    <TextView
+        android:id="@+id/diaryTextView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:text="Diary Content..."
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rectangular1"
+        android:textSize="30sp"/>
+
+
+
+    <!-- 在这里添加其他视图元素，如文本、按钮等 -->
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="300dp"
+        android:background="@drawable/baseline_close_24"
+        /> <!-- "关闭控件" 按钮 --> <!-- "关闭控件" 按钮 -->
+
+    <ImageView
+        android:id="@+id/rabbit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/happyrabbit"/>
+</RelativeLayout>

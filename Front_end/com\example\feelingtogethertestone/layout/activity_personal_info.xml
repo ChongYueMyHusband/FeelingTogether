@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_personal_info">
+
+    <Button
+        android:id="@+id/Photo"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="160dp"
+        android:text="Person Photo"
+        android:textColor="@color/black"
+        android:background="@drawable/circle1_shape"
+        android:src="@drawable/cat"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="  Name:   "
+            android:textColor="@color/white"
+            ></TextView>
+        <EditText
+            android:id="@+id/nameET"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint=""
+            android:maxLength="11"
+            android:background="@drawable/rectangular1_shape"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            ></EditText>
+        ></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Idiograph:   "
+            android:textColor="@color/white"
+            ></TextView>
+        <EditText
+            android:id="@+id/idiographET"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:hint=""
+            android:maxLength="11"
+            android:background="@drawable/rectangular1_shape"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            ></EditText>
+        ></LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="  Gender:   "
+            android:textColor="@color/white"
+            ></TextView>
+        <EditText
+            android:id="@+id/sexET"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:hint=""
+            android:maxLength="11"
+            android:background="@drawable/rectangular1_shape"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            ></EditText>
+        ></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="  Age:   "
+            android:textColor="@color/white"
+            ></TextView>
+        <EditText
+            android:id="@+id/ageET"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:hint=""
+            android:inputType="number"
+            android:maxLength="11"
+            android:background="@drawable/rectangular1_shape"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            ></EditText>
+        ></LinearLayout>
+
+    <Button
+        android:id="@+id/SaveInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Save Info"
+        android:background="@drawable/rectangular1_shape"
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/CollectPersonImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Collect Person Image"
+        android:background="@drawable/rectangular1_shape"
+        android:textColor="@color/white"
+        />
+
+    <ImageView
+        android:id="@+id/pictureStored"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        />
+
+
+
+
+
+
+</LinearLayout>

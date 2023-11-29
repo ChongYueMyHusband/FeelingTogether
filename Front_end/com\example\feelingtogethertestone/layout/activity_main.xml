@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@drawable/background_login"
+    android:scaleType="centerInside">
+
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_gravity=""
+        android:layout_height="45dp"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular1_shape"
+            android:hint="Account number"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"></EditText>
+        ></LinearLayout>
+
+    <Button
+        android:id="@+id/regester"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/transparent"
+        android:text="Creat an account!"
+        android:textColor="#6081A5"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/passward"
+            android:layout_width="270dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:hint="Passward"
+            android:maxLength="11"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:background="@drawable/rectangular1_shape"
+            ></EditText>
+        ></LinearLayout>
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passward"
+        android:layout_alignLeft="@id/passward"
+        android:text="Remember me"
+        android:textColor="#6081A5"/>
+
+    <Button
+
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="159dp"
+        android:background="@drawable/rectangular1_shape"
+        android:text="   sign in  "
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/facialRecognition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rectangular1_shape"
+        android:text="facial Recognition"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/facialPicture"
+        android:layout_width="match_parent"
+        android:layout_height="397dp"
+        android:layout_gravity="center_horizontal" />
+
+
+
+</LinearLayout>

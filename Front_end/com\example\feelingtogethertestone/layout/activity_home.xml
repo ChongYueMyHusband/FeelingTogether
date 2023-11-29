@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_background"
+    android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/UserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.45"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/user_avatars"
+        android:paddingLeft="50dp"
+        android:text="Personal Infomation"
+
+        />
+
+    <ImageView
+        android:id="@+id/DailySentence"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1.4"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/daily_sentence">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/EmotionDiary"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/home_diary"
+        android:paddingRight="200dp"
+        android:paddingTop="20dp"
+        android:text="Emotion Diary" />
+
+    <Button
+        android:id="@+id/EmotionForum"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/home_forum"
+        android:paddingRight="200dp"
+        android:paddingTop="20dp"
+        android:text="Emotion Forum"
+        />
+
+    <Button
+        android:id="@+id/ChattingRobot"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/home_robot"
+        android:paddingRight="200dp"
+        android:paddingBottom="20dp"
+        android:text="Chatting Robot" />
+
+
+</LinearLayout>
