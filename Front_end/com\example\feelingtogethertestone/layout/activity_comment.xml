@@ -13,7 +13,8 @@
         android:id="@+id/layout_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
-        android:background="@color/color_theme"
+        android:textColor="@color/White"
+        android:background="@color/lowGreen"
         android:orientation="horizontal">
 
         <TextView
@@ -44,9 +45,9 @@
         android:layout_marginTop="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_10"
         android:layout_marginBottom="@dimen/dp_10"
-        android:background="@drawable/bg_login"
         android:text="发布评论"
-        android:textColor="@color/White"
+
+        android:background="@color/lowGreen"
         android:textSize="@dimen/sp_15" />
 
 
