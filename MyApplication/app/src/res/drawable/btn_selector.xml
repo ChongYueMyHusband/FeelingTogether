@@ -1,0 +1,15 @@
+<!-- res/drawable/btn_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <objectAnimator
+            android:propertyName="alpha"
+            android:valueTo="0.5"
+            android:duration="300" />
+    </item>
+    <item>
+        <objectAnimator
+            android:propertyName="alpha"
+            android:valueTo="1.0"
+            android:duration="300" />
+    </item>
+</selector>

@@ -1,0 +1,12 @@
+<!-- res/drawable/chat_background_layer.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <color android:color="#D0E4E3" />
+    </item>
+    <item android:drawable="@drawable/robot"
+        android:gravity="center"
+        android:width="250dp"
+        android:height="250dp"/>
+
+</layer-list>
