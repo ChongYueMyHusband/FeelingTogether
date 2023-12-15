@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#CCEAE9">
+
+    <ImageView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/diary_title"/>
+
+    <Button
+        android:id="@+id/photoDiary"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/baseline_add_a_photo_24"
+        />
+
+    <Button
+        android:id="@+id/bold"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/baseline_format_bold_24"
+        android:layout_toRightOf="@id/photoDiary"
+        />
+
+    <Button
+        android:id="@+id/italic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/baseline_format_italic_24"
+        android:layout_toRightOf="@id/bold"
+        />
+
+    <Button
+        android:id="@+id/baseline"
+        android:layout_width="30dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/baseline_format_color_text_24"
+        android:layout_toRightOf="@id/italic"
+        />
+
+    <Button
+        android:id="@+id/audioDiary"
+        android:layout_width="30dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/micro"
+        android:layout_toRightOf="@+id/baseline"
+        android:layout_marginLeft="3dp"
+        />
+
+    <Button
+        android:id="@+id/audioPlay"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/baseline_credit_card_24"
+        android:layout_toRightOf="@+id/audioDiary"
+        android:layout_marginLeft="3dp"
+        />
+
+
+    <com.yuruiyin.richeditor.RichEditText
+        android:id="@+id/content"
+        android:hint="请输入文本"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:background="@drawable/rectangular"></com.yuruiyin.richeditor.RichEditText>
+
+    <ImageView
+        android:id="@+id/rabbit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="580dp"
+        android:src="@drawable/diary_rabbit1"/>
+
+    <Button
+        android:id="@+id/saveDiary"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:text="   Save  "
+        android:layout_marginTop="580dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_button2"
+        />
+    <Button
+        android:id="@+id/historyDiary"
+        android:layout_width="230dp"
+        android:layout_height="49dp"
+        android:text="   History  "
+        android:layout_marginTop="650dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/rounded_button1"
+        />
+
+
+</RelativeLayout>

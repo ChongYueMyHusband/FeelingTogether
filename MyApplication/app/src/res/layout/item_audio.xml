@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="125dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_audio">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="372dp"
+        android:layout_height="60dp"
+        android:text="1111"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/tv_title"
+        android:layout_marginTop="0dp"
+        android:text="2002/01/20"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/iv_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="40dp"
+        android:text="播放" />
+
+    <Button
+        android:id="@+id/iv_de"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="87dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="0dp"
+        android:text="删除" />
+
+    <Button
+        android:id="@+id/iv_re"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="175dp"
+        android:layout_marginBottom="0dp"
+        android:text="重命名" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_time"
+        android:layout_marginRight="-82dp"
+        android:layout_marginBottom="25dp"
+        android:layout_toLeftOf="@id/iv_play"
+        android:text="00:00:21" />
+
+    <LinearLayout
+        android:id="@+id/ly_control"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_play"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+</RelativeLayout>

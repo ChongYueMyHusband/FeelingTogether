@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bear"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/lowGreen"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_10">
+        <ImageView
+            android:id="@+id/image_back"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/tv_title_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="评论界面"
+            android:textColor="@color/White"
+            android:textSize="@dimen/sp_15" />
+
+        <ImageView
+            android:id="@+id/image_delete"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edit_comment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_save1"
+        android:layout_below="@id/layout_title"
+        android:background="@drawable/bear"
+        android:gravity="top"
+        android:hint="请输入内容..."
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/sp_15" />
+
+    <Button
+        android:id="@+id/btn_save1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:background="@color/lowGreen"
+        android:text="发布"
+        android:textColor="@color/White"
+        android:textSize="@dimen/sp_15" />
+
+
+</RelativeLayout>

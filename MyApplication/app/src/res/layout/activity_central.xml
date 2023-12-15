@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/emotion_forum_background"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/POSITIVE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/NEGATIVE"
+        android:layout_marginBottom="110dp"
+        android:background="@drawable/emotion_forum_positive"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingRight="150dp"
+        android:paddingTop="80dp"
+        />
+
+    <ImageView
+        android:id="@+id/rabbitHappy"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/NEGATIVE"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/emotion_forum_rabbit_happy">
+
+    </ImageView>
+
+    <Button
+        android:id="@+id/NEGATIVE"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/writingPosts"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/emotion_forum_negative"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingRight="150dp"
+        android:paddingTop="80dp"
+        />
+
+    <Button
+        android:id="@+id/writingPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@+id/rabbitSad"
+        android:background="@drawable/emotion_forum_post" />
+
+    <ImageView
+        android:id="@+id/rabbitSad"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/emotion_forum_rabbit_sad">
+
+    </ImageView>
+
+</RelativeLayout>
+

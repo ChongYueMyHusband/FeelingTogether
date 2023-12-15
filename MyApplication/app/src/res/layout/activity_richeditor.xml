@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <com.yuruiyin.richeditor.RichEditText
+            android:id="@+id/richEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:gravity="top|left"
+            android:hint="请输入..."
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="5dp"
+            android:maxLength="20000"
+            android:minHeight="350dp"
+            android:paddingBottom="70dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="23dp"
+            android:textColor="#171717"
+            android:textColorHint="#aaaaaa"
+            android:textCursorDrawable="@null"
+            android:textSize="16dp"
+            app:editor_image_radius="3dp"
+            app:editor_show_gif_mark="true"
+            app:editor_show_video_mark="true"
+            app:editor_show_long_image_mark="true" />
+
+        <!-- Buttons go here -->
+        <Button
+            android:id="@+id/btn_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="加黑"/>
+        <Button
+            android:id="@+id/btn_underline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下划线"/>
+        <Button
+            android:id="@+id/btn_italic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="斜体"/>
+        <Button
+            android:id="@+id/btn_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="图片"/>
+        <Button
+            android:id="@+id/btn_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取文本内容"/>
+        <Button
+            android:id="@+id/btn_content2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="获取文本内容加图片"/>
+
+        <com.yuruiyin.richeditor.RichEditText
+            android:id="@+id/richEditText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="#ffffff"
+            android:gravity="top|left"
+            android:hint="请输入..."
+            android:inputType="textMultiLine"
+            android:lineSpacingExtra="5dp"
+            android:maxLength="20000"
+            android:minHeight="350dp"
+            android:paddingBottom="70dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="23dp"
+            android:textColor="#171717"
+            android:textColorHint="#aaaaaa"
+            android:textCursorDrawable="@null"
+            android:textSize="16dp"
+            app:editor_image_radius="3dp"
+            app:editor_show_gif_mark="true"
+            app:editor_show_video_mark="true"
+            app:editor_show_long_image_mark="true" />
+
+    </LinearLayout>
+</ScrollView>

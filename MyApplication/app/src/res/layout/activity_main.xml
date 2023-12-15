@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="#D0E4E3"
+    android:scaleType="centerInside">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_marginTop="150dp"
+            android:layout_width="210dp"
+            android:layout_height="80dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/sign_in" />
+
+        <ImageView
+            android:id="@+id/rabbit"
+            android:layout_width="170dp"
+            android:layout_height="180dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@drawable/rabbit_sign_in" />
+        ></LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="left"
+        android:text="Personal Account"
+        android:textColor="#6081A5"
+
+        ></TextView>
+
+    <LinearLayout
+
+        android:layout_width="360dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp">
+
+
+        <EditText
+            android:id="@+id/id"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular1_shape"
+            android:inputType="number"
+            android:maxLength="11"
+            android:textColor="#141212"></EditText>
+        ></LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="left"
+        android:text="Password"
+        android:textColor="#6081A5"
+
+        ></TextView>
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/passward"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginTop="5dp"
+            android:maxLength="11"
+            android:inputType="textPassword"
+            android:textColor="#141212"
+            android:background="@drawable/rectangular1_shape"
+            ></EditText>
+        ></LinearLayout>
+
+    <CheckBox
+        android:id="@+id/check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/passward"
+        android:layout_alignLeft="@id/passward"
+        android:text="Remember me"
+        android:textColor="#6081A5"/>
+
+    <Button
+
+        android:id="@+id/login"
+        android:layout_width="360dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rectangular2_shape"
+        android:text="   sign in  "
+        android:textColor="@color/white"
+        />
+
+    <Button
+        android:id="@+id/regester"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/dp_19"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/transparent"
+        android:text="Sign up!"
+        android:textColor="#6081A5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 第一个模块 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/facialRecognition"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/camera"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Face recognition to log in"
+                android:textColor="#6081A5" />
+        </LinearLayout>
+
+        <!-- 第二个模块 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/guide"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/baseline_help_center_24"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Application user manual"
+                android:textColor="#6081A5" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/facialPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginRight="130dp" />
+
+
+</LinearLayout>
