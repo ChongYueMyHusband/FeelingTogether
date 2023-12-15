@@ -3,6 +3,7 @@ package com.example.feelingtogethertestone;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,14 +14,17 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.core.app.ActivityCompat;
@@ -28,6 +32,7 @@ import androidx.core.content.FileProvider;
 
 import com.example.HTTPUtils.FacialRecAsyncTask;
 import com.example.HTTPUtils.LoginAsyncTask;
+import com.example.musicPlayer.MusicPlayerActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,8 +50,8 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
     private Button register;//注册按钮
     public CheckBox cb;//勾选框
     //变量声明：
-    private String account;//用户名
-    private String pwd;//密码
+    public static String account;//用户名
+    public static String pwd;//密码
     //记住账号密码
     private SharedPreferences sp;
     private String result;
@@ -56,13 +61,21 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
     private ImageView facialPicture;  // IV控件，显示拍照得到的图像
     private Uri imageUri;
     private final String TAG = "MainActivity";
-
+    private Button guide;
+    private AlertDialog alertDialog;
+    View dialogView;
     //需要申请的运行时权限
     private String[] permissions = new String[]{
             Manifest.permission.RECORD_AUDIO,
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE
     };
+
+
+    public static String getUsername(){
+        return account;
+    }
+    public static String getPsw(){return  pwd;};
 
 
     ////请求用户授权几个权限，调用后系统会显示一个请求用户授权的提示对话框，App不能配置和修改这个对话框，
@@ -84,6 +97,14 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
         passward1 = (EditText) findViewById(R.id.passward);
         login = (Button) findViewById(R.id.login);
         register = (Button) findViewById(R.id.regester);
+        guide = (Button) findViewById(R.id.guide);
+
+        // 使用 textPassword 类型会使输入的文本以密码形式显示，通常是以圆点或星号等字符来替代实际的文本。
+        passward1.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+
+        // 创建一个AlertDialog.Builder对话框
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+
 
         //记住账号密码
         cb = (CheckBox) findViewById(R.id.check);
@@ -164,13 +185,13 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
                     // "account":"2387171466","sex":null}}result
                     // {"message":"用户名或者密码错误！","success":false,"data":null}result
 
-                    // 登录后进行页面跳转
-                    //监听按钮，如果点击，就跳转
-                    Intent intent = new Intent();
-                    //前一个（MainActivity.this）是目前页面，后面一个是要跳转的下一个页面
-                    intent.setClass(MainActivity.this, HomeActivity.class);
-                    // 在 MainActivity 中传递的账号和密码
-                    startActivity(intent);
+//                    // 登录后进行页面跳转
+//                    //监听按钮，如果点击，就跳转
+//                    Intent intent = new Intent();
+//                    //前一个（MainActivity.this）是目前页面，后面一个是要跳转的下一个页面
+//                    intent.setClass(MainActivity.this, HomeActivity.class);
+//                    // 在 MainActivity 中传递的账号和密码
+//                    startActivity(intent);
                 }
             }
         });
@@ -208,6 +229,18 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
         });
 
 
+        guide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //监听按钮，如果点击，就跳转
+                Intent intent = new Intent();
+                //前一个（MainActivity.this）是目前页面，后面一个是要跳转的下一个页面
+                intent.setClass(MainActivity.this, GuideActivity.class);
+                // 在 MainActivity 中传递的账号和密码
+                startActivity(intent);
+            }
+        });
+
 
 
     }
@@ -222,15 +255,16 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
             case TAKE_PHOTO:
                 if (resultCode == RESULT_OK){ //拍摄照片成功并返回了结果
                     //将拍摄到的照片显示在ImageView picture;
-//                    try {
-//                        bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
-//                    } catch (FileNotFoundException e) {
-//                        throw new RuntimeException(e);
-//                    }
+                    try {
+                        bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+                        facialPicture.setImageBitmap(bitmap);
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
                     // 这里原本是拍照的逻辑，现在改为加载固定的图片
                     // 加载固定的图片 giegie.jpeg
-                    bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.giegie);
-                    facialPicture.setImageBitmap(bitmap);
+//                    bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.gege);
+//                    facialPicture.setImageBitmap(bitmap);
                 }
                 break;
         }
@@ -310,4 +344,6 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
             });
         }
     }
+
+
 }
