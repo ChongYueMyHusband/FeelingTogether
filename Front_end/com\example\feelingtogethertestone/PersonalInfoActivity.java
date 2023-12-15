@@ -43,6 +43,8 @@ public class PersonalInfoActivity extends AppCompatActivity implements PersonalI
     private Uri imageUri;
     Bitmap bitmap = null; // 储存头像的bitmap
     private String imageString = "null123"; // 头像的string表达
+    private ImageView femaleIV;
+    private ImageView maleIV;
 
 
     @Override
@@ -59,7 +61,8 @@ public class PersonalInfoActivity extends AppCompatActivity implements PersonalI
         save = findViewById(R.id.SaveInfo);
         pictureStored = (ImageView) findViewById(R.id.pictureStored);
         collectPersonImage = findViewById(R.id.CollectPersonImage);
-
+        femaleIV = (ImageView)findViewById(R.id.femaleIV);
+        maleIV = (ImageView)findViewById(R.id.maleIV);
 
         //SharedPreferences是一种轻型的数据存储方式
         //将数据显示到UI控件
@@ -86,7 +89,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements PersonalI
 
         Log.i(TAG, "account" + account + "pwd" + pwd);
         imageString = savedPhoto;
-        Log.i(TAG, savedPhoto); // E/Head/2387171466png
+//        Log.i(TAG, savedPhoto); // E/Head/2387171466png
 
         // 将 Base64 编码的字符串解码为字节数组
         byte[] imageBytes = Base64.decode(savedPhoto, Base64.DEFAULT);
@@ -128,7 +131,11 @@ public class PersonalInfoActivity extends AppCompatActivity implements PersonalI
                 editor.putString("age", userAge);
                 //提交editor
                 editor.commit();
-
+                Toast.makeText(PersonalInfoActivity.this, "保存成功！", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent();
+                //前一个（MainActivity.this）是目前页面，后面一个是要跳转的下一个页面
+                intent.setClass(PersonalInfoActivity.this,HomeActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -151,6 +158,30 @@ public class PersonalInfoActivity extends AppCompatActivity implements PersonalI
                 //前一个（MainActivity.this）是目前页面，后面一个是要跳转的下一个页面
                 intent.setClass(PersonalInfoActivity.this,TakePhotoActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        femaleIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 点击事件发生时，将 sex 字符串赋值为 "male"
+                userSex = "Female";
+                sexET.setText(userSex);
+                // 同时更新 ImageView 的背景，你可以根据需要更改
+                femaleIV.setBackgroundResource(R.drawable.gender_female_clicked);
+                maleIV.setBackgroundResource(R.drawable.gender_male);
+            }
+        });
+
+        maleIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 点击事件发生时，将 sex 字符串赋值为 "male"
+                userSex = "Male";
+                sexET.setText(userSex);
+                // 同时更新 ImageView 的背景，你可以根据需要更改
+                maleIV.setBackgroundResource(R.drawable.gender_male_clicked);
+                femaleIV.setBackgroundResource(R.drawable.gender_female);
             }
         });
 
@@ -203,6 +234,7 @@ public class PersonalInfoActivity extends AppCompatActivity implements PersonalI
             editor.commit(); // 或者使用 editor.apply();
         }
     }
+
 
     @Override
     public void onPersonalInfoResult(boolean isSuccess) {

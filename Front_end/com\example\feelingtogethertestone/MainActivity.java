@@ -51,7 +51,7 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
     public CheckBox cb;//勾选框
     //变量声明：
     public static String account;//用户名
-    public static String pwd;//密码
+    private String pwd;//密码
     //记住账号密码
     private SharedPreferences sp;
     private String result;
@@ -75,7 +75,6 @@ public class MainActivity extends Activity implements LoginAsyncTask.OnLoginResu
     public static String getUsername(){
         return account;
     }
-    public static String getPsw(){return  pwd;};
 
 
     ////请求用户授权几个权限，调用后系统会显示一个请求用户授权的提示对话框，App不能配置和修改这个对话框，

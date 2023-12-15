@@ -87,15 +87,15 @@ public class TakePhotoActivity extends AppCompatActivity implements FacialCollec
             //请求码 TAKE_PHOTO -- 处理拍摄照片的返回结果时，可以根据这个请求码进行区分
             case TAKE_PHOTO:
                 if (resultCode == RESULT_OK){ //拍摄照片成功并返回了结果
-//                    try {
-//                        //将拍摄到的照片显示在ImageView picture;
-//                        bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
-//                        picture.setImageBitmap(bitmap);
-//                    }catch (FileNotFoundException e){
-//                        e.printStackTrace();
-//                    }
-                    bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.kunkun);
-                    picture.setImageBitmap(bitmap);
+                    try {
+                        //将拍摄到的照片显示在ImageView picture;
+                        bitmap = BitmapFactory.decodeStream(getContentResolver().openInputStream(imageUri));
+                        picture.setImageBitmap(bitmap);
+                    }catch (FileNotFoundException e){
+                        e.printStackTrace();
+                    }
+//                    bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.kunkun);
+//                    picture.setImageBitmap(bitmap);
                 }
                 break;
             default:

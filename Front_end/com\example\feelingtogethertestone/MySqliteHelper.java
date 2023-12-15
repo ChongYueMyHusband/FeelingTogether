@@ -114,7 +114,7 @@ public class MySqliteHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.query(
                 this.TABLE_HISTORY,
-                new String[]{"result"},     //要检索的列
+                new String[]{COLUMN_DIARY_CONTENT, COLUMN_SENTIMENT_POLARITY},  // 要检索的列
                 null,                    //不添加任何筛选条件
                 null,                    //选择条件的参数
                 null,                    //分组方式
@@ -126,7 +126,13 @@ public class MySqliteHelper extends SQLiteOpenHelper {
         // 检查 cursor 是否成功移动到查询结果的第一行。如果 cursor 成功移动到第一行，就表示查询结果非空，进入条件块执行以下操作。
         if (cursor.moveToFirst()) {
             do {
-                results.add(cursor.getString(cursor.getColumnIndex("result")));
+//                results.add(cursor.getString(cursor.getColumnIndex("result")));
+                // 获取"日记内容"和"情感极性"列的值
+                String diaryContent = cursor.getString(cursor.getColumnIndex(COLUMN_DIARY_CONTENT));
+                String sentimentPolarity = cursor.getString(cursor.getColumnIndex(COLUMN_SENTIMENT_POLARITY));
+
+                // 在结果列表中添加获取到的值
+                results.add("Diary Content: \n" + diaryContent + "\nSentiment Polarity: \n" + sentimentPolarity);
             } while (cursor.moveToNext());
         }
 
