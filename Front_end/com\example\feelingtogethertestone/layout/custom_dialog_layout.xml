@@ -1,50 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:background="#ED8380"
-    > <!-- 设置对话框的背景图片 -->
+    android:padding="16dp">
 
     <TextView
         android:id="@+id/diaryTextView"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="350dp"
-        android:text="Diary Content Placeholder"
-        android:background="@drawable/rectangular1"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:textSize="30sp"/>
-
-
-
-    <!-- 在这里添加其他视图元素，如文本、按钮等 -->
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/rectangular1"
+        android:fontFamily="@font/font_custom"
+        android:padding="20dp"
+        android:text="Diary Content Placeholder"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/closeButton"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="300dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/baseline_close_24"
-         /> <!-- "关闭控件" 按钮 -->
+        app:layout_constraintBottom_toTopOf="@+id/diaryTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/deleteButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="440dp"
-        android:layout_marginLeft="150dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_button3"
         android:text="Delete this diary"
-        android:background="@drawable/rounded_button3"/> <!-- "删除当前日记" 按钮 -->
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
 
     <ImageView
         android:id="@+id/rabbit1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="400dp"
-        android:src="@drawable/dialog_rabbit1"/>
-</RelativeLayout>
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/dialog_rabbit1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diaryTextView" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40389293" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
