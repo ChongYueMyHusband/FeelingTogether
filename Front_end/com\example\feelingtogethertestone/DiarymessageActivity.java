@@ -30,7 +30,10 @@ public class DiarymessageActivity extends AppCompatActivity {
     private List<String> resultList;
     private final String TAG = "DiaryMessage";
     private AlertDialog alertDialog;
-    public DiarymessageActivity() {}
+    View dialogView;
+    public DiarymessageActivity() {
+
+    }
     public DiarymessageActivity(String msg){
         this.msg=msg;
     }
@@ -38,13 +41,14 @@ public class DiarymessageActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diarymessage);
+
         MySqliteHelper dbHelper = new MySqliteHelper(this);
         // 初始化视图
         listView = findViewById(R.id.diaryListView);
+
         // 存储从数据库中检索出的最近的日记
         resultList = new ArrayList<>();
         resultList = dbHelper.getRecentResults();
-
 
         // 创建适配器并将结果显示在ListView中
         // 创建了一个 ArrayAdapter 对象，它用于将日记的文本内容（resultList 中的字符串）与 ListView 控件关联起来
@@ -57,17 +61,31 @@ public class DiarymessageActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 // 获取用户点击的日记内容
                 final String selectedDiary = resultList.get(position);
+                // 通过解析字符串获取diaryContent和sentimentPolarity
+                String diaryContent = extractValue(selectedDiary, "Diary Content:");
+                String sentimentPolarity = extractValue(selectedDiary, "Sentiment Polarity:");
                 Log.i(TAG, "" + position);  // 最上方为0（最早的信息为0），一次往下递增
                 Log.i(TAG, selectedDiary);  // 成功返回文本内容
+                Log.i(TAG, diaryContent);  // 成功返回文本内容
+                // [image]
+                // 123123, Sentiment Polarity:
+                Log.i(TAG, sentimentPolarity);  // 成功返回文本内容
+                // 对应的情感极性
 
                 // 创建一个AlertDialog.Builder对话框
                 AlertDialog.Builder builder = new AlertDialog.Builder(DiarymessageActivity.this);
 
+                // 根据情感极性。创建不同XML布局的对话框
                 // 获取自定义的视图布局
                 // 用于获取自定义对话框的布局
                 // R.layout.custom_dialog_layout 是一个 XML 布局文件，它定义了对话框的外观，包括背景图片、按钮等。
-                View dialogView = getLayoutInflater().inflate(R.layout.custom_dialog_layout, null);
-                builder.setView(dialogView);
+                if (sentimentPolarity.equals("positive")){
+                    dialogView = getLayoutInflater().inflate(R.layout.custom_dialog_layout, null);
+                    builder.setView(dialogView);
+                } else {
+                    dialogView = getLayoutInflater().inflate(R.layout.custom_dialog_layout_negative, null);
+                    builder.setView(dialogView);
+                }
 
 //                // 设置背景图片
 //                // 可以使用ImageView来展示背景图片
@@ -149,6 +167,22 @@ public class DiarymessageActivity extends AppCompatActivity {
 
         cursor.close();
         db.close();
+    }
+
+    // 从字符串中提取值的方法
+    private String extractValue(String source, String key) {
+        // 查找key在字符串中的位置
+        int startIndex = source.indexOf(key);
+        if (startIndex != -1) {
+            // 找到key后，找到冒号的位置
+            int colonIndex = source.indexOf(":", startIndex);
+            if (colonIndex != -1) {
+                // 返回冒号后面的值（去除空格）
+                return source.substring(colonIndex + 1).trim();
+            }
+        }
+        // 如果找不到key或者冒号，返回空字符串或者其他默认值
+        return "";
     }
 
 
