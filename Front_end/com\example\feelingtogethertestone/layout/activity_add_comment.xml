@@ -11,7 +11,8 @@
         android:id="@+id/layout_title"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_50"
-        android:background="@color/color_theme"
+        android:textColor="@color/White"
+        android:background="@color/lowGreen"
         android:orientation="horizontal"
         android:paddingHorizontal="@dimen/dp_10">
         <ImageView
@@ -60,12 +61,12 @@
         android:id="@+id/btn_save1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
-        android:layout_alignParentBottom="true"
         android:layout_marginStart="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginEnd="@dimen/dp_10"
         android:layout_marginBottom="@dimen/dp_10"
-        android:background="@drawable/bg_login"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/lowGreen"
         android:text="发布"
         android:textColor="@color/White"
         android:textSize="@dimen/sp_15" />
