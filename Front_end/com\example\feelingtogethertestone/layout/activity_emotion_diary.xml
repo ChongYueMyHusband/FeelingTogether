@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#CCEAE9">
 
     <ImageView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="36dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/diary_title"/>
+        android:layout_marginTop="48dp"
+        android:src="@drawable/diary_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/photoDiary"
@@ -20,7 +23,8 @@
         android:layout_marginLeft="22dp"
         android:layout_marginTop="170dp"
         android:background="@drawable/baseline_add_a_photo_24"
-        />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bold"
@@ -28,8 +32,8 @@
         android:layout_height="40dp"
         android:layout_marginTop="170dp"
         android:background="@drawable/baseline_format_bold_24"
-        android:layout_toRightOf="@id/photoDiary"
-        />
+        app:layout_constraintLeft_toRightOf="@id/photoDiary"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/italic"
@@ -37,8 +41,8 @@
         android:layout_height="40dp"
         android:layout_marginTop="170dp"
         android:background="@drawable/baseline_format_italic_24"
-        android:layout_toRightOf="@id/bold"
-        />
+        app:layout_constraintLeft_toRightOf="@id/bold"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/baseline"
@@ -46,60 +50,100 @@
         android:layout_height="35dp"
         android:layout_marginTop="170dp"
         android:background="@drawable/baseline_format_color_text_24"
-        android:layout_toRightOf="@id/italic"
-        />
+        app:layout_constraintLeft_toRightOf="@id/italic"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/audioDiary"
         android:layout_width="30dp"
         android:layout_height="27dp"
+        android:layout_marginLeft="3dp"
         android:layout_marginTop="170dp"
         android:background="@drawable/micro"
-        android:layout_toRightOf="@+id/baseline"
-        android:layout_marginLeft="3dp"
-        />
+        app:layout_constraintLeft_toRightOf="@+id/baseline"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/audioPlay"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/baseline_credit_card_24"
+        app:layout_constraintLeft_toRightOf="@+id/audioDiary"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/content"
-        android:hint="请输入文本"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="300dp"
-        android:layout_marginTop="240dp"
         android:layout_marginLeft="15dp"
+        android:layout_marginTop="80dp"
         android:layout_marginRight="15dp"
+        android:background="@drawable/rectangular"
+        android:fontFamily="@font/font_custom"
+        android:hint="请输入文本"
+        android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/grey"
-        android:background="@drawable/rectangular"></EditText>
+        android:textSize="20sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
 
     <ImageView
         android:id="@+id/rabbit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="580dp"
-        android:src="@drawable/diary_rabbit1"/>
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/diary_rabbit1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/content" />
 
     <Button
         android:id="@+id/saveDiary"
         android:layout_width="230dp"
         android:layout_height="49dp"
-        android:text="   Save  "
-        android:layout_marginTop="580dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/rounded_button2"
-        />
+        android:text="   Save  "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/rabbit"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/content"
+        app:layout_constraintVertical_bias="0.17000002" />
+
     <Button
         android:id="@+id/historyDiary"
         android:layout_width="230dp"
         android:layout_height="49dp"
-        android:text="   History  "
-        android:layout_marginTop="650dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="40dp"
         android:background="@drawable/rounded_button1"
-        />
+        android:text="  History  "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/saveDiary"
+        app:layout_constraintVertical_bias="0.19" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.38104838" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

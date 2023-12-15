@@ -47,7 +47,7 @@
         android:src="@drawable/rabbit2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="190dp"
+        android:layout_marginTop="200dp"
         android:layout_marginLeft="50dp"
         android:layout_width="80dp"
         android:layout_height="80dp"/>
@@ -65,16 +65,20 @@
         android:src="@drawable/background123"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="270dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="-50dp"
+        android:layout_width="600dp"
+        android:layout_height="600dp"/>
 
     <ListView
         android:id="@+id/diaryListView"
         android:layout_width="350dp"
         android:layout_height="0dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="300dp"
         android:layout_weight="1"
+        android:textSize="20sp"
+        android:fontFamily="@font/font_custom"
+        android:padding="10dp"
         android:background="#F3F3F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
