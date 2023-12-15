@@ -1,156 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background_personal_info">
+    android:background="#AED1CF">
 
-    <Button
-        android:id="@+id/Photo"
-        android:layout_width="83dp"
-        android:layout_height="83dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="160dp"
-        android:text="Person Photo"
-        android:textColor="@color/black"
-        android:background="@drawable/circle1_shape"
-        android:src="@drawable/cat"
-        />
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
-        android:layout_marginTop="40dp">
+        android:layout_gravity="center_horizontal">
+
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="40dp"
             android:gravity="center"
-            android:text="  Name:   "
-            android:textColor="@color/white"
-            ></TextView>
-        <EditText
-            android:id="@+id/nameET"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:hint=""
-            android:maxLength="11"
-            android:background="@drawable/rectangular1_shape"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            ></EditText>
-        ></LinearLayout>
+            android:text="Information"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1F"
+            android:layout_centerHorizontal="true"></TextView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Idiograph:   "
-            android:textColor="@color/white"
-            ></TextView>
-        <EditText
-            android:id="@+id/idiographET"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:hint=""
-            android:maxLength="11"
-            android:background="@drawable/rectangular1_shape"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            ></EditText>
-        ></LinearLayout>
+        <Button
+            android:id="@+id/SaveInfo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="295dp"
+            android:background="@drawable/rectangular3_shape"
+            android:text="✓"
+            android:textColor="#1A1A1F"
+            android:textSize="20sp"
+            android:stateListAnimator="@drawable/btn_selector"/>
+        ></RelativeLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="  Gender:   "
-            android:textColor="@color/white"
-            ></TextView>
-        <EditText
-            android:id="@+id/sexET"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:hint=""
-            android:maxLength="11"
-            android:background="@drawable/rectangular1_shape"
-            android:textColor="@color/black"
-            android:textColorHint="@color/grey"
-            ></EditText>
-        ></LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="  Age:   "
-            android:textColor="@color/white"
-            ></TextView>
-        <EditText
-            android:id="@+id/ageET"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:hint=""
-            android:inputType="number"
-            android:maxLength="11"
-            android:background="@drawable/rectangular1_shape"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
-            ></EditText>
-        ></LinearLayout>
-
-    <Button
-        android:id="@+id/SaveInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Save Info"
-        android:background="@drawable/rectangular1_shape"
-        android:textColor="@color/white"
-        />
-
-    <Button
-        android:id="@+id/CollectPersonImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Collect Person Image"
-        android:background="@drawable/rectangular1_shape"
-        android:textColor="@color/white"
-        />
 
     <ImageView
         android:id="@+id/pictureStored"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="165dp"
         android:layout_gravity="center_horizontal"
+        android:background="@drawable/rectangular3_shape"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/CollectPersonImage"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="210dp"
+        android:layout_marginLeft="155dp"
+        android:text="take a picture"
+        android:background="@drawable/rectangular4_shape"
+        android:textColor="#1A1A1F"
+        android:stateListAnimator="@drawable/btn_selector"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/Photo"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="140dp"
+        android:text="Select Photo"
+        android:background="@drawable/rectangular4_shape"
+        android:stateListAnimator="@drawable/btn_selector"
+        android:layout_centerHorizontal="true"
         />
 
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="270dp"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="  Name:   "
+            android:textColor="#1A1A1F"></TextView>
+        <EditText
+            android:id="@+id/nameET"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangular3_shape"
+            android:hint=""
+            android:maxLength="11"
+            android:textColor="#1A1A1F"></EditText>
+
+        >
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="  Gender:   "
+            android:textColor="#1A1A1F"></TextView>
+
+        <EditText
+            android:id="@+id/sexET"
+            android:layout_width="190dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangular3_shape"
+            android:textColor="#1A1A1F"
+            ></EditText>
+
+        <ImageView
+            android:id="@+id/femaleIV"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gender_female" />
+
+        <ImageView
+            android:id="@+id/maleIV"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/gender_male" />
+        ></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="440dp"
+        android:orientation="horizontal"
+        android:layout_gravity="left"
+        android:layout_marginLeft="30dp"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="  Age:   "
+            android:textColor="#1A1A1F"></TextView>
+
+        <EditText
+            android:id="@+id/ageET"
+            android:layout_width="250dp"
+            android:layout_weight="1"
+            android:layout_height="45dp"
+            android:layout_marginTop="20dp"
+            android:inputType="number"
+            android:maxLength="11"
+            android:background="@drawable/rectangular3_shape"
+            android:textColor="#1A1A1F"
+            ></EditText>
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="270dp"
+            android:background="@drawable/rabbit_info" />
+
+        ></RelativeLayout>
 
 
 
 
 
-</LinearLayout>
+    <RelativeLayout
+        android:layout_width="360dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginLeft="30dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="  Idiograph:   "
+            android:textColor="#1A1A1F"></TextView>
+
+        <EditText
+            android:id="@+id/idiographET"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rectangular3_shape"
+            android:hint=""
+            android:maxLength="11"
+            android:textColor="#1A1A1F"></EditText>
+        >
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
