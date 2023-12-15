@@ -1,4 +1,4 @@
-package com.example.Http;
+package com.example.HTTPUtils;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
