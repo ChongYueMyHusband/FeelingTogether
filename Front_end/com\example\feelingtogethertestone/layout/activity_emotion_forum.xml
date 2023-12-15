@@ -1,29 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@drawable/emotion_forum_background">
 
     <Button
         android:id="@+id/activeSection"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/emotion_forum_positive"
+        android:paddingTop="80dp"
+        android:paddingEnd="150dp"
         android:text="Active Section"
-        />
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/rabbitHappy"
+        android:layout_width="80dp"
+        android:layout_height="100dp"
+        android:background="@drawable/emotion_forum_rabbit_happy"
+        app:layout_constraintBottom_toTopOf="@+id/negativeSection"
+        app:layout_constraintStart_toStartOf="@+id/activeSection"
+        app:layout_constraintTop_toBottomOf="@+id/activeSection" />
 
     <Button
         android:id="@+id/negativeSection"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/emotion_forum_negative"
+        android:paddingTop="80dp"
+        android:paddingEnd="150dp"
         android:text="Negative Section"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline3" />
 
-    <Button
-        android:id="@+id/writingPosts"
-        android:layout_width="match_parent"
+    <!--    <Button-->
+    <!--        android:id="@+id/writingPosts"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/emotion_forum_post"-->
+    <!--        android:text="make a post"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        android:layout_marginStart="30dp"-->
+    <!--        android:layout_marginBottom="20dp"/>-->
+
+    <ImageView
+        android:id="@+id/rabbitSad"
+        android:layout_width="60dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/emotion_forum_rabbit_sad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Write a Post"
-        />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.55" />
 
-</LinearLayout>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
