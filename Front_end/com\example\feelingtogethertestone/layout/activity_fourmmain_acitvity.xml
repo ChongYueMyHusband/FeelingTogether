@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.example.fourm.AddNotebookActivity"
-    android:background="@color/bg_common_gray">
+    android:background="@drawable/bear">
 
     <LinearLayout
         android:id="@+id/layout_title"
@@ -23,6 +23,7 @@
             android:gravity="center"
             android:text="论坛"
             android:textColor="@color/White"
+            android:background="@color/lowGreen"
             android:textSize="@dimen/sp_15" />
 
     </LinearLayout>
@@ -39,12 +40,13 @@
         android:id="@+id/btn_add"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_40"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/lowGreen"
+
         android:text="发布帖子"
-        android:background="@drawable/bg_login"
         android:textColor="@color/White"
-        android:textSize="@dimen/sp_15"
-        android:layout_margin="@dimen/dp_10"
-        android:layout_alignParentBottom="true"/>
+        android:textSize="@dimen/sp_15" />
 
 
 </RelativeLayout>
